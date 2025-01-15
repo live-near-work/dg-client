@@ -1,26 +1,28 @@
 'use client';
 
-import { ReactNode, MouseEventHandler } from 'react';
+import { ReactNode, ButtonHTMLAttributes } from 'react';
+
+import IOSShareIcon from 'svg/ios-share.svg';
 
 import * as S from './styled';
-interface ButtonProps {
-  onClick?: MouseEventHandler<HTMLButtonElement>;
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
-export const Button = ({ onClick, children }: ButtonProps) => {
+export const Button = ({ children, disabled = false }: ButtonProps) => {
   return (
-    <S.DefaultButton onClick={onClick}>
-      <div className={'button-title'}>{children}</div>
+    <S.DefaultButton disabled={disabled}>
+      <div>{children}</div>
     </S.DefaultButton>
   );
 };
 
-export const ShareButton = ({ onClick, children }: ButtonProps) => {
+export const ShareButton = ({ children }: ButtonProps) => {
   return (
-    <S.RoundedButton onClick={onClick}>
-      <img src={'/svg/ios-share.svg'} alt={'ios-share'} />
-      <div className={'button-title'}>{children}</div>
+    <S.RoundedButton>
+      <IOSShareIcon />
+      <div>{children}</div>
     </S.RoundedButton>
   );
 };

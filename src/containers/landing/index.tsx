@@ -1,11 +1,12 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import React from 'react';
 
-import { Button, ShareButton } from '@components/Button';
-import { Header, HeaderBack } from '@components/Header';
-import { Graphic } from '@components/landing/Graphic';
-import { Text } from '@components/landing/Text';
+import { Button, ShareButton } from 'components/Button';
+import { Header, HeaderLogo } from 'components/Header';
+import { Graphic } from 'components/landing/Graphic';
+import { Text } from 'components/landing/Text';
 
 import * as S from './styled';
 
@@ -19,7 +20,7 @@ export default function Landing() {
   return (
     <div>
       <Header>
-        <HeaderBack />
+        <HeaderLogo>동그리미</HeaderLogo>
       </Header>
       <S.PageWrapper>
         <S.Main>

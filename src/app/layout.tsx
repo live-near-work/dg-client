@@ -1,10 +1,11 @@
 import type { Metadata, Viewport } from 'next';
-import { Providers } from '@app/providers';
-import StyledComponentsRegistry from '@libs/registry';
 
-const APP_NAME = '직주근접';
-const APP_DEFAULT_TITLE = '직주근접';
-const APP_TITLE_TEMPLATE = '%s - 직주근접 App';
+import { Providers } from 'app/providers';
+import StyledComponentsRegistry from 'libs/registry';
+
+const APP_NAME = '동그리미';
+const APP_DEFAULT_TITLE = '동그리미';
+const APP_TITLE_TEMPLATE = '%s - 동그리미 App';
 const APP_DESCRIPTION = '직장 기반 주거 지역 추천 서비스';
 
 export const metadata: Metadata = {

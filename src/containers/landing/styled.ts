@@ -1,12 +1,10 @@
-'use client';
-
 import styled from 'styled-components';
 
-import { flex_column, flex_center, header_padding } from '@styles/common';
+import { flex_column, flex_center, header_height } from 'styles/common';
 
 export const PageWrapper = styled.div`
   ${flex_column};
-  ${header_padding};
+  padding: ${header_height};
   height: 100vh;
   overflow-y: auto;
 `;
@@ -17,16 +15,16 @@ export const Main = styled.main`
 `;
 
 export const ContentContainer = styled.div`
-  ${flex_column}
-  ${flex_center}
+  ${flex_column};
+  ${flex_center};
   height: fit-content;
   padding: 48px 36px 70px 36px;
   gap: 32px 0px;
 `;
 
 export const TextContainer = styled.div`
-  ${flex_column}
-  ${flex_center}
+  ${flex_column};
+  ${flex_center};
   gap: 16px 0px;
 `;
 

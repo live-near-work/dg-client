@@ -1,6 +1,8 @@
 'use client';
 
-import typography from '@styles/typography';
+import React from 'react';
+
+import typography from 'styles/typography';
 
 import * as S from './styled';
 

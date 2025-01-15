@@ -3,13 +3,11 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { flex_center, prevent_click_box } from '@styles/common';
-import typography from '@styles/typography';
+import { flex_center, header_height, prevent_click_box } from 'styles/common';
+import typography from 'styles/typography';
 
 export const HeaderLogo = styled(Link)`
   ${prevent_click_box};
-  position: absolute;
-  left: 20px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -23,8 +21,6 @@ export const HeaderLogo = styled(Link)`
 `;
 
 export const HeaderClose = styled.button`
-  position: absolute;
-  right: 20px;
   display: flex;
   align-items: center;
   outline: none;
@@ -33,8 +29,6 @@ export const HeaderClose = styled.button`
 `;
 
 export const HeaderBack = styled.button`
-  position: absolute;
-  left: 20px;
   display: flex;
   align-items: center;
   outline: none;
@@ -43,18 +37,22 @@ export const HeaderBack = styled.button`
 
 export const HeaderPage = styled.div`
   ${typography.title1}
-  ${flex_center}
+  ${flex_center};
+  position: absolute;
+  left: 0px;
   width: 100%;
   pointer-events: none;
 `;
 
-export const Header = styled.header`
+export const Header = styled.header<{ underline?: boolean }>`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 56px;
+  height: ${header_height};
   background-color: white;
-  padding: 12px 20px;
+  padding: 8px 20px;
+  box-shadow: ${({ underline = true }) => (underline ? 'inset 0 -1px 0 #E0E2E4' : 'none')};
 `;
